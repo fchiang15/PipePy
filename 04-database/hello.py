@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 from flask.ext.pymongo import PyMongo
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = os.environ['MONGO_URI']
+app.config['MONGO_URI'] = "mongodb://localhost:27017/myDatabase"
 mongo = PyMongo(app)
 
 @app.route('/', methods=['GET', 'POST'])
